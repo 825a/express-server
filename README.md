@@ -6,10 +6,13 @@ create config.env file with MONGO_URI and PORT specified
 
 add your IP to Atlas
 
-in cmd: node server.js
+in cmd: node server.js > app.log
 
 get data:
-http://localhost:[PORT]/genes?id=[Gene_ID]
+http://localhost:[PORT]/gene?id=[Gene_ID]
+
+get gene-ids:
+http://localhost:[PORT]/gene-ids
 
 example:
-http://localhost:5005/genes?id=AT1G01020
+http://localhost:5005/gene?id=AT1G01020

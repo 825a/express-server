@@ -1,10 +1,11 @@
+const { MongoClient, ServerApiVersion } = require("mongodb");
 require("dotenv").config({path: "./config.env"})
-const { MongoClient, ServerApiVersion } = require('mongodb');
 
 let DB
 
 
 const uri = process.env.MONGO_URI
+const database_name = process.env.DATABASE_NAME
 
 const client = new MongoClient(uri, {
   serverApi: {
@@ -27,7 +28,7 @@ async function connect_to_db() {
         console.error(error)
     }
 
-    DB = client.db("Database_tryout")
+    DB = client.db(database_name)
 
     return DB !== undefined
 }

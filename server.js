@@ -1,7 +1,7 @@
 const express = require("express")
+const cors = require("cors");
 const conn = require("./connections/db_connection.js")
 const gene_routes = require("./routes/gene_routes.js")
-const cors = require("cors");
 require("dotenv").config({path: "./config.env"})
 
 
