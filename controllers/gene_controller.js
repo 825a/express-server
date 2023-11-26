@@ -7,9 +7,9 @@ const get_gene = async (req, res) => {
         const gene_id = req.query.id
 
         const db = conn.get_db()
-        const my_collection = db.collection("example_data2")
+        const my_collection = db.collection("Mock_genes_2")
 
-        const query = { "Gene": gene_id }
+        const query = { "Gene_ID": gene_id }
 
         const result = await my_collection.findOne(query)
 
@@ -25,6 +25,7 @@ const get_gene = async (req, res) => {
 const get_wgcna = async (req, res) => {
 
     // TODO
+    res.status(400).json( {"not": "implemented"} )
 }
 
 

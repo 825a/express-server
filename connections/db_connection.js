@@ -27,7 +27,7 @@ async function connect_to_db() {
         console.error(error)
     }
 
-    DB = client.db("first_database")
+    DB = client.db("Database_tryout")
 
     return DB !== undefined
 }
