@@ -1,8 +1,14 @@
 const express = require("express")
 const conn = require("./connections/db_connection.js")
 const gene_routes = require("./routes/gene_routes.js")
+const cors = require("cors");
 require("dotenv").config({path: "./config.env"})
 
+
+const cors_options = {
+   origin: '*',
+   optionSuccessStatus: 200,
+}
 
 const port = process.env.PORT
 
@@ -24,5 +30,7 @@ app.use((req, res, next) => {
     console.log(req.method, req.path)
     next()
 })
+
+app.use(cors(cors_options))
 
 app.use(gene_routes)
