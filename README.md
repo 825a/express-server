@@ -9,7 +9,7 @@ add your IP to Atlas
 in cmd: node server.js
 
 get data:
-http://localhost:<PORT>/genes?id=<Gene_ID>
+http://localhost:[PORT]/genes?id=[Gene_ID]
 
 example:
 http://localhost:5005/genes?id=AT1G01020
